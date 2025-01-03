@@ -76,7 +76,7 @@ const MessageInput = () => {
                 <button className={isDark==="false"?"stopButton text-black border border-black  ":"stopButton border border-white  text-white "} onClick={navigateToHome}>
                     <VscDebugRestart/>
                 </button> :
-                <button className="stopButton" onClick={navigateToHome} disabled={isSearching}>
+                <button className={isDark==="false"?"stopButton text-black border border-black  ":"stopButton border border-white  text-white "} onClick={navigateToHome} disabled={isSearching}>
                     <VscDebugRestart/>
                 </button>
             }
