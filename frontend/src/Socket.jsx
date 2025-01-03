@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useChat } from './contextApi/ChatContext';
 // import beepSound from "./assets/ping-82822.mp3"
 
-const URL = "http://localhost:8080";
+const URL = "https://unispherebackend.onrender.com";
 
 export const socket = io(URL, {
     autoConnect: false,
