@@ -66,7 +66,7 @@ const News = () => {
       // console.log(res.data.message); // Display server success message
       window.location.reload();
     }).catch((error) => {
-      console.error("Error:", error.response?.data?.message || "An error occurred");
+      console.error("Error:", error.response?.data?.message || error.message);
     });
   }
 
