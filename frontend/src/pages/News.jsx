@@ -30,6 +30,8 @@ const News = () => {
       const data = await res.json()
       setnews(data.news())
       console.log(news);
+      console.log(token);
+
     }
 
     getNews()
