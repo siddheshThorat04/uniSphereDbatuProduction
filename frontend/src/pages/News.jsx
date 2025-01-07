@@ -18,7 +18,7 @@ const News = () => {
   const {isDark, setDark}=useDarkThemeContext()
   useEffect(() => {
     const getNews = async () => {
-      const res = await fetch('/api/user/getNews', {
+      const res = await fetch('https://unispherebackend.onrender.com/api/user/getNews', {
         method: "GET",
         headers: {
           'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ const News = () => {
     getNews()
   }, [])
   const deleteNews = async (id) => {
-    const res = await fetch(`/api/admin/deleteNews/${id}`, {
+    const res = await fetch(`https://unispherebackend.onrender.com/api/admin/deleteNews/${id}`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ const News = () => {
     formData.append('description', description);
     formData.append('isForAll', isForAll);
     setIsAdding(false)
-    await axios.post('/api/user/addNews', formData, {
+    await axios.post('https://unispherebackend.onrender.com/api/user/addNews', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }

@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useAuthContext } from '../contextApi/authContext';
 import { useDarkThemeContext } from '../contextApi/DarkTheme';
-import eventsLogo from '../assets/events.png'
-import chattingPPLogo from '../assets/chatHomeLogo.png'
-import newsLogo from '../assets/last_24_hrs.png'
 import Slider from '../components/Slider';
 // import eventsLogo from '../assets/events.png'
 
@@ -28,7 +25,7 @@ const Signup = () => {
     const username = e.target[0].value
     const password = e.target[1].value
     const college = e.target[2].value
-    const res = await fetch('/api/auth/signup', {
+    const res = await fetch('https://unispherebackend.onrender.com/api/auth/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

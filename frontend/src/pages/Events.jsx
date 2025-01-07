@@ -18,7 +18,7 @@ const Events = () => {
   const {authUser}=useAuthContext()
   useEffect(() => {
     const getEvents = async () => {
-      const res = await fetch('/api/user/getEvents', {
+      const res = await fetch('https://unispherebackend.onrender.com/api/user/getEvents', {
         method: "GET",
         headers: {
           'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ const Events = () => {
     getEvents()
   }, [])
   const deleteEvent = async (id) => {
-    const res = await fetch(`/api/admin/deleteEvent/${id}`, {
+    const res = await fetch(`https://unispherebackend.onrender.com/api/admin/deleteEvent/${id}`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ const Events = () => {
     formData.append('description', description);
     formData.append('isForAll', isForAll);
     setIsAdding(false)
-    await axios.post('/api/user/addEvent', formData, {
+    await axios.post('https://unispherebackend.onrender.com/api/user/addEvent', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
