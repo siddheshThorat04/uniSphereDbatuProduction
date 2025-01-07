@@ -25,7 +25,7 @@ const News = () => {
         }
       })
       const data = await res.json()
-      setnews(data.news.reverse())
+      setnews(data.news())
       console.log(news);
     }
 
