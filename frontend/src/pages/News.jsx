@@ -16,11 +16,14 @@ const News = () => {
   const [isAdding, setIsAdding] = useState(false);
   const [news, setnews] = useState([]);
   const {isDark, setDark}=useDarkThemeContext()
+  const token = localStorage.getItem(mbAuth); 
+
   useEffect(() => {
     const getNews = async () => {
       const res = await fetch('https://unispherebackend.onrender.com/api/user/getNews', {
         method: "GET",
         headers: {
+          'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
         }
       })
@@ -35,6 +38,7 @@ const News = () => {
     const res = await fetch(`https://unispherebackend.onrender.com/api/admin/deleteNews/${id}`, {
       method: "POST",
       headers: {
+        'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'
       }
     })
@@ -55,6 +59,7 @@ const News = () => {
     setIsAdding(false)
     await axios.post('https://unispherebackend.onrender.com/api/user/addNews', formData, {
       headers: {
+        'Authorization': `Bearer ${token}`,
         'Content-Type': 'multipart/form-data'
       }
     }).then((res) => {
