@@ -16,7 +16,7 @@ const News = () => {
   const [isAdding, setIsAdding] = useState(false);
   const [news, setnews] = useState([]);
   const {isDark, setDark}=useDarkThemeContext()
-  const token = localStorage.getItem(mbAuth); 
+  const token = localStorage.getItem("mbAuth"); 
 
   useEffect(() => {
     const getNews = async () => {
