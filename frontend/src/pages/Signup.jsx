@@ -16,8 +16,9 @@ const Signup = () => {
     setDark("false")
     const getCollleges = async () => {
         const res=await fetch('/api/admin/getClg')
-       setcolleges(await res.json())
-       console.log(colleges);
+        const data=await res.json()
+        setcolleges(data.colleges)
+       console.log(data.colleges);
     }
     getCollleges()
   }, []);
