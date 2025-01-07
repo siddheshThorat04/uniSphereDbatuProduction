@@ -63,16 +63,16 @@ const Signup = () => {
          <form   onSubmit={handleSubmit} className='loginForm  w-full px-3 ' >  
 
               <div className="inputContainer2">
-              <label htmlFor="username"  className='text-white' >what we can call you ?</label>
-              <input type="text"  name='username'     placeholder='Enter the username'  />
+              <label htmlFor="user_name"  className='text-white' >what we can call you ?</label>
+              <input type="text"   id='user_name'  name='username'     placeholder='Enter the username'  />
               </div>
               <div className="inputContainer2">
-              <label htmlFor="password" className='text-white'  >Password (keep it short)</label>
-              <input type="text"  name='password' placeholder='Enter the password'  />
+              <label htmlFor="pass_word" className='text-white'  >Password (keep it short)</label>
+              <input type="text"  id='pass_word' name='password' placeholder='Enter the password'  />
               </div>
               <div className="inputContainer2">
-              <label htmlFor="college" className='text-white'  >Select college👇</label>
-              <select className='selectCollege'    name="college" id="">
+              <label htmlFor="college_name" className='text-white'  >Select college👇</label>
+              <select className='selectCollege' id='college_name'    name="college" >
               {
                   colleges.map((clg)=><option className='bg-black'  key={clg._id} value={clg._id}>{clg.name}</option>)
               }
