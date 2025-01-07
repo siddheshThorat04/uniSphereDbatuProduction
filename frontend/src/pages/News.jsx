@@ -19,6 +19,7 @@ const News = () => {
   const token = localStorage.getItem("mbAuth"); 
 
   useEffect(() => {
+    console.log(token);
     const getNews = async () => {
       const res = await fetch('https://unispherebackend.onrender.com/api/user/getNews', {
         method: "GET",
@@ -30,7 +31,6 @@ const News = () => {
       const data = await res.json()
       setnews(data.news())
       console.log(news);
-      console.log(token);
 
     }
 
