@@ -4,14 +4,14 @@
 	// https://vitejs.dev/config/
 	export default defineConfig({
 		plugins: [react()],
-		server: {
-			port: 3000,
-			proxy: {
-				"/api": {
-					target: "https://unispherebackend.onrender.com",
-					changeOrigin: true,
-					secure: true,
-				},
-			},
-		},
+	// 	server: {
+	// 		port: 3000,
+	// 		proxy: {
+	// 			"/api": {
+	// 				target: "https://unispherebackend.onrender.com",
+	// 				changeOrigin: true,
+	// 				secure: true,
+	// 			},
+	// 		},
+	// 	},
 	});
