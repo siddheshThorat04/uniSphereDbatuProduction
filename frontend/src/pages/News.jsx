@@ -63,10 +63,9 @@ const News = () => {
         'Authorization': `Bearer rnd_JSVlEFrNujsqMPc7SwRBIx56iNIw`
       }
     }).then((res) => {
-      // console.log(res.data.message); // Display server success message
       window.location.reload();
     }).catch((error) => {
-      console.error("Error:", error.response?.data?.message || error.message);
+      console.error(error.message);
     });
   }
 
