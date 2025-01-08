@@ -4,7 +4,7 @@ import './App.css';
 import {  Route, Routes ,Navigate} from 'react-router-dom';
 import Chat from './pages/Chat';
 import Socket from './Socket';
-import { useAuthContext } from './contextApi/authContext.jsx';
+import { useAuthContext } from './context/authContext.jsx';
 
 
 import Login from "./pages/Login.jsx"
@@ -18,7 +18,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.jsx"
 import StudyZone from './pages/StudyZone.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
 import AboutUs from './pages/AboutUs.jsx';
-import {useDarkThemeContext}  from './contextApi/DarkTheme.jsx';
+import {useDarkThemeContext}  from './context/DarkTheme.jsx';
 function App() {
   const{authUser}=useAuthContext()
   const {isDark, setDark}=useDarkThemeContext()

@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom'
 import dp from "../assets/dp.png"
 import { FaUniversity } from 'react-icons/fa';
 import { FaInstagram } from "react-icons/fa";
-import { useAuthContext } from "../contextApi/authContext"
+import { useAuthContext } from "../context/authContext"
 import { IoIosLogOut } from 'react-icons/io'
 import { GoHome } from "react-icons/go";
-import { useDarkThemeContext } from '../contextApi/DarkTheme';
+import { useDarkThemeContext } from '../context/DarkTheme';
 const ProfilePage = () => {
   const userId = useParams().id
   const [user, setUser] = useState()

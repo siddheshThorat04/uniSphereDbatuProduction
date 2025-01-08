@@ -3,7 +3,7 @@ import dp from "../assets/dp.png"
 import { FaUniversity } from 'react-icons/fa';
 import { FaInstagram } from "react-icons/fa";
 import { GoHome } from "react-icons/go";
-import { useDarkThemeContext } from '../contextApi/DarkTheme';
+import { useDarkThemeContext } from '../context/DarkTheme';
 const Leadboard = () => {
     const [Leadboard, setLeadboard] = useState([]);
     const {isDark}=useDarkThemeContext()

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { useAuthContext } from '../contextApi/authContext';
-import { useDarkThemeContext } from '../contextApi/DarkTheme';
+import { useAuthContext } from '../context/authContext';
+import { useDarkThemeContext } from '../context/DarkTheme';
 import Slider from '../components/Slider';
 // import eventsLogo from '../assets/events.png'
 

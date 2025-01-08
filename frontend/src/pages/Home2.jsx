@@ -5,9 +5,9 @@ import randomChatLogo from "../assets/randomChatLogo.png"
 import last_24_hrs from "../assets/last_24_hrs.png"
 import studyTogether from "../assets/studyTogether.png"
 import podium from "../assets/podium.png"
-import { useAuthContext } from '../contextApi/authContext'
+import { useAuthContext } from '../context/authContext'
 import eventsLogo from '../assets/events.png'
-import { useDarkThemeContext } from '../contextApi/DarkTheme';
+import { useDarkThemeContext } from '../context/DarkTheme';
 const Home2 = () => {
     const {authUser,setauthUser}=useAuthContext()
      const {isDark, setDark}=useDarkThemeContext()

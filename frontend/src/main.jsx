@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ChatContextProvider } from './contextApi/ChatContext';
+import { ChatContextProvider } from './context/ChatContext';
 import { BrowserRouter } from 'react-router-dom';
-import { AuthContextProvider } from './contextApi/authContext.jsx';
-import { DarkThemeContextProvider } from './contextApi/DarkTheme.jsx';
+import { AuthContextProvider } from './context/authContext.jsx';
+import { DarkThemeContextProvider } from './context/DarkTheme.jsx';
 
 
 
