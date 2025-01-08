@@ -19,12 +19,12 @@ const News = () => {
   const token = ""; 
 
   useEffect(() => {
-    console.log(token);
     const getNews = async () => {
       const res = await fetch('https://unispherebackend.onrender.com/api/user/getNews', {
         method: "GET",
         headers: {
-          'Authorization': `Bearer rnd_JSVlEFrNujsqMPc7SwRBIx56iNIw`
+          'Authorization': `Bearer rnd_JSVlEFrNujsqMPc7SwRBIx56iNIw`,
+          "Content-Type": "application/json"
         }
       })
       const data = await res.json()
@@ -40,7 +40,8 @@ const News = () => {
     const res = await fetch(`https://unispherebackend.onrender.com/api/admin/deleteNews/${id}`, {
       method: "POST",
       headers: {
-        'Authorization': `Bearer rnd_JSVlEFrNujsqMPc7SwRBIx56iNIw`
+        'Authorization': `Bearer rnd_JSVlEFrNujsqMPc7SwRBIx56iNIw`,
+        "Content-Type": "application/json"
       }
     })
     const data = await res.json()
@@ -60,8 +61,10 @@ const News = () => {
     setIsAdding(false)
     await axios.post('https://unispherebackend.onrender.com/api/user/addNews', formData, {
       headers: {
-        'Authorization': `Bearer rnd_JSVlEFrNujsqMPc7SwRBIx56iNIw`
+        'Authorization': `Bearer rnd_JSVlEFrNujsqMPc7SwRBIx56iNIw`,
+        "Content-Type": "application/json"
       }
+
     }).then((res) => {
       window.location.reload();
     }).catch((error) => {
