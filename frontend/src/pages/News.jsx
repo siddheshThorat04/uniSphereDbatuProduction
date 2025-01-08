@@ -29,7 +29,7 @@ const News = () => {
       })
       const data = await res.json()
       
-      setnews(data.news)
+      setnews(data?.news)
       console.log(news);
 
     }
@@ -75,7 +75,7 @@ const News = () => {
       <button className= {isDark==="false"?"HomeButton HomeButtonDark":"HomeButton"}  ><GoHome onClick={() => window.location.href = "/"   } className={isDark==="false"?"HomeButton text-balck":"HomeButton text-white"}  /></button>
       <h1 className={isDark==="false"?'Post_latest_happening Post_latest_happeningDark text-3xl ':"Post_latest_happening text-3xl"} >Latest News</h1>
   
-      {news.length==0 && <h1 className={isDark==="false"?'Post_latest_happening2  text-3xl text-black ':"Post_latest_happening2 text-3xl"} >Ohh, Such a Empty 😞 <span className={isDark==="false"?'post_something_na text-black ':'post_something_na text-white'}  >What's happening in Your College ? Share it.</span></h1>}
+      {news?.length==0 && <h1 className={isDark==="false"?'Post_latest_happening2  text-3xl text-black ':"Post_latest_happening2 text-3xl"} >Ohh, Such a Empty 😞 <span className={isDark==="false"?'post_something_na text-black ':'post_something_na text-white'}  >What's happening in Your College ? Share it.</span></h1>}
       <div className="newsDiv2">
         
       {news.map((item) => {
