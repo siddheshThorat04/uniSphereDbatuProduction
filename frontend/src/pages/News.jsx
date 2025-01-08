@@ -1,8 +1,12 @@
 
 "use client"
+
 import React, { useEffect, useState } from 'react'
 import dp from "../assets/dp.png"
 import axios from "axios"
+import Cookies from 'js-cookie';
+
+
 import {GoHome} from "react-icons/go"
 import { MdDelete } from "react-icons/md";
 import {useAuthContext} from '../context/authContext'
@@ -16,14 +20,13 @@ const News = () => {
   const [isAdding, setIsAdding] = useState(false);
   const [news, setnews] = useState([]);
   const {isDark, setDark}=useDarkThemeContext()
-  const token = ""; 
-
+  const token = Cookies.get('mateBatu');  // Retrieve the token from the cookie
   useEffect(() => {
     const getNews = async () => {
       const res = await fetch('https://unispherebackend.onrender.com/api/user/getNews', {
         method: "GET",
         headers: {
-          'Authorization': `Bearer rnd_JSVlEFrNujsqMPc7SwRBIx56iNIw`,
+          'Authorization': `Bearer ${token}`,
           "Content-Type": "application/json"
         }
       })
