@@ -34,6 +34,7 @@ const News = () => {
       
       setnews(data?.news)
       console.log(news);
+      console.log(token);
 
     }
 
