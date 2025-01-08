@@ -5,8 +5,8 @@ import dp from "../assets/dp.png"
 import axios from "axios"
 import {GoHome} from "react-icons/go"
 import { MdDelete } from "react-icons/md";
-import {useAuthContext} from '../contextApi/authContext'
-import { useDarkThemeContext } from '../contextApi/DarkTheme'
+import {useAuthContext} from '../context/authContext'
+import { useDarkThemeContext } from '../context/DarkTheme'
 const News = () => {
   const {authUser}=useAuthContext()
   const [file, setFile] = useState();

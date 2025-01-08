@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import { useChat } from '../../contextApi/ChatContext';
+import { useChat } from '../../context/ChatContext';
 import { socket } from '../../Socket';
 import { VscDebugRestart } from "react-icons/vsc";
 import { BsSend } from "react-icons/bs";
-import { useDarkThemeContext } from '../../contextApi/DarkTheme';
+import { useDarkThemeContext } from '../../context/DarkTheme';
 const MessageInput = () => {
     const { userId, onlineUsers, isSearching, setIsSearching, receiver, setReceiver, setMessages, isSending, setIsSending, message, setMessage, setIsTyping } = useChat()
     const { isDark } = useDarkThemeContext();

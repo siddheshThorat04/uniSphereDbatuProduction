@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
-import { useChat } from '../../contextApi/ChatContext'
+import { useChat } from '../../context/ChatContext'
 import { socket } from '../../Socket'
 import dp from '../../assets/dp.png'
-import { useDarkThemeContext } from '../../contextApi/DarkTheme'
+import { useDarkThemeContext } from '../../context/DarkTheme'
 import { TiMessageTyping } from "react-icons/ti";
 import {GoHome} from "react-icons/go"
 const Messages = () => {

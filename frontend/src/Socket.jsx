@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { io } from 'socket.io-client';
 import { v4 as uuidv4 } from 'uuid';
-import { useChat } from './contextApi/ChatContext';
+import { useChat } from './context/ChatContext';
 // import beepSound from "./assets/ping-82822.mp3"
 
 const URL = "https://unispherebackend.onrender.com";
