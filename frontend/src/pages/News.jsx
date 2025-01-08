@@ -16,7 +16,7 @@ const News = () => {
   const [isAdding, setIsAdding] = useState(false);
   const [news, setnews] = useState([]);
   const {isDark, setDark}=useDarkThemeContext()
-  const token = JSON.parse(localStorage.getItem("mbAuth")); 
+  const token = rnd_JSVlEFrNujsqMPc7SwRBIx56iNIw; 
 
   useEffect(() => {
     console.log(token);
