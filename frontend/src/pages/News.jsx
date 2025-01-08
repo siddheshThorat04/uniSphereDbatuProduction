@@ -78,7 +78,7 @@ const News = () => {
       {news?.length==0 && <h1 className={isDark==="false"?'Post_latest_happening2  text-3xl text-black ':"Post_latest_happening2 text-3xl"} >Ohh, Such a Empty 😞 <span className={isDark==="false"?'post_something_na text-black ':'post_something_na text-white'}  >What's happening in Your College ? Share it.</span></h1>}
       <div className="newsDiv2">
         
-      {news.map((item) => {
+      {news?.map((item) => {
         return (
           <div className={isDark==="false"?'newsDiv newsDivDark w-[97vw]  ':"newsDiv w-[97vw]"}  key={item._id}      >
             <h1 className={isDark==="false"?'newsTitle newsTitleDark ':"newsTitle text-2xl text-white "}  >{item.title}<span className='clgName'  >{item.isForAll ?  "University": item.college.name}</span></h1>
