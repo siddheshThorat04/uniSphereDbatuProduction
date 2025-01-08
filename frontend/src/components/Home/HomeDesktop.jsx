@@ -2,7 +2,7 @@ import React from "react";
 import chatHomeLogo from "../../assets/chatHomeLogo.png";
 import { useNavigate } from "react-router-dom";
 import { GoHome } from "react-icons/go";
-import { useDarkThemeContext } from "../../contextApi/DarkTheme";
+import { useDarkThemeContext } from "../../context/DarkTheme";
 
 const HomeDesktop = ({ setIsTermsModal }) => {
   const {isDark}=useDarkThemeContext()
